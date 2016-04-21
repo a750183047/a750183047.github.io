@@ -21,7 +21,12 @@ hexo：快速、简单且功能强大的 Node.js 博客框架。A fast, simple &
 <meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/npm_install.png">
 <meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/hexo_init.png">
 <meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/npm_install.png">
-<meta property="og:updated_time" content="2016-04-20T12:59:39.386Z">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/github.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%9F%A5%E7%9C%8Bssh.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh.png">
+<meta property="og:updated_time" content="2016-04-21T01:40:15.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 搭建过程">
 <meta name="twitter:description" content="利用Hexo+Github搭建个人博客页面本文参照 Zippera’s blog 的系列教程，加上自己操作时遇到的问题，总结的文章。
@@ -233,6 +238,28 @@ hexo：快速、简单且功能强大的 Node.js 博客框架。A fast, simple &
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo gengrate  </span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <p>是不是看到结果了，是不是很简单，快点试试吧。</p>
 <p>下面就是把博客同步到github的方法了，毕竟我们是想让更多的人看到，是吧。</p>
+<h2 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h2><p>这个没有什么好说的了，去官网注册账号就可以了，要是有账号就更好了，连这一步都省掉了。<a href="https://github.com/signup/free" target="_blank" rel="external">在这里注册</a>。</p>
+<p>注册成功登陆之后应该是这个界面。</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/github.png" alt=""></p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>什么是仓库呢？就是repository，就在这里。</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt=""></p>
+<p>点击Repository，再点击new，创建一个新的仓库。</p>
+<p>注意：仓库的名字应该和自己github账号相对应的，比如我的账号是 <code>a750183047</code> 所以我的仓库名字应该是 <code>a750183047.github.io</code> 这里的 <code>github.io</code> 是固定的，只需要修改前面的名字就可以了。<br>比如这样。<br><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png" alt=""></p>
+<p>因为我的名字已经存在了，所以才会有错误提示，不用管它，直接点下面的绿色按钮，创建仓库。</p>
+<h2 id="创建ssh"><a href="#创建ssh" class="headerlink" title="创建ssh"></a>创建ssh</h2><p>到这里，代码仓库已经创建好了，现在就要创建一个ssh密钥，用来验证身份，上传代码了。</p>
+<p>好的，进入你博客的文件夹（<code>E:\bolg</code>）,右键打开git bush，输入以下命令，查看ssh密钥。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%9F%A5%E7%9C%8Bssh.png" alt=""></p>
+<p>上面前三个命令都输错了，第四个是正确的命令，如果输入正确的命令还是提示 No such file or directory 就是说你没有ssh，需要生成一个新的，当然啦，如果是第一次安装，肯定是没有的。要是命令输入完后没有提示，再输入一个 <code>ls</code> 命令查看一下文件，如果有文件，就是说有ssh，就不用再创建新的了。</p>
+<h2 id="生成新的ssh公钥"><a href="#生成新的ssh公钥" class="headerlink" title="生成新的ssh公钥"></a>生成新的ssh公钥</h2><p>输入命令 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;</span><br></pre></td></tr></table></figure>
+<p>生成新的密钥</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh.png" alt=""></p>
+<p>要是提示这个，就是成功了。</p>
+<p>注意，在输入完上述命令后，会有两个地方需要输入密码，这里你可以输入，也可以直接输入回车。</p>
+<pre><code>Enter passphrase (empty for no passphrase): [Type a passphrase]    
+Enter same passphrase again: [Type passphrase again]
+</code></pre><p>我没有输密码，毕竟记性太差，容易记混，好嘛。。  </p>
 
       
     </div>
