@@ -26,7 +26,14 @@ hexo：快速、简单且功能强大的 Node.js 博客框架。A fast, simple &
 <meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png">
 <meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%9F%A5%E7%9C%8Bssh.png">
 <meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh.png">
-<meta property="og:updated_time" content="2016-04-21T05:02:34.255Z">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E4%BD%8D%E7%BD%AE.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/setting.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A2.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A22.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B5%8B%E8%AF%95ssh.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/deploy.png">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E5%9C%B0%E5%9D%80.png">
+<meta property="og:updated_time" content="2016-04-21T05:07:03.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 搭建过程">
 <meta name="twitter:description" content="利用Hexo+Github搭建个人博客页面本文参照 Zippera’s blog 的系列教程，加上自己操作时遇到的问题，总结的文章。
@@ -257,8 +264,32 @@ hexo：快速、简单且功能强大的 Node.js 博客框架。A fast, simple &
 <p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh.png" alt=""></p>
 <p>要是提示这个，就是成功了。</p>
 <p>注意，在输入完上述命令后，会有两个地方需要输入密码，这里你可以输入，也可以直接输入回车。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): [Type a passphrase]    </span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">我没有输密码，毕竟记性太差，容易记混，好嘛。。  </span><br><span class="line"></span><br><span class="line">## 查看ssh  ##</span><br><span class="line"></span><br><span class="line">好了，ssh生成了之后我们去看看它究竟是什么样的。位置是</span><br><span class="line"></span><br><span class="line">![](http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E4%BD%8D%E7%BD%AE.png)</span><br><span class="line"></span><br><span class="line">C盘-用户-你的用户名-.ssh文件夹。  </span><br><span class="line">有没有看到那个pub文件？那就是刚刚生成的密钥。打开它，复制里面的内容。</span><br><span class="line"></span><br><span class="line">## 添加ssh ##</span><br><span class="line"></span><br><span class="line">打开github，登陆之后选择settings</span><br><span class="line"></span><br><span class="line">![](http://7xoixa.com1.z0.glb.clouddn.com/image/blog/setting.png)</span><br><span class="line"></span><br><span class="line">进入设置之后选择</span><br><span class="line"></span><br><span class="line">![](http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A2.png)</span><br><span class="line"></span><br><span class="line">点击按钮</span><br><span class="line"></span><br><span class="line">![](http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A22.png)</span><br><span class="line"></span><br><span class="line">title随便填，下面的key就把刚刚复制的粘贴进去，点击下面绿色的按钮，输入密码后确认添加。</span><br><span class="line"></span><br><span class="line">## 测试ssh ##</span><br><span class="line"></span><br><span class="line">添加完之后，怎么知道自己的密钥好用呢？</span><br><span class="line">我们来测试一下就知道了。</span><br><span class="line"></span><br><span class="line">输入命令（还是在git bush那个黑框里）</span><br><span class="line"></span><br><span class="line">``</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">![](http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B5%8B%E8%AF%95ssh.png)</span><br><span class="line"></span><br><span class="line">如果出现上面图片中的文字，就是成功添加了ssh,否则就要重新添加一遍了。</span><br><span class="line"></span><br><span class="line">## 部署 ##</span><br><span class="line"></span><br><span class="line">编辑`_config.yml`（在`E:\blog`下）。在部署的时候，要把下面的zipper都换成你的账号。</span><br><span class="line"></span><br><span class="line">![](http://7xoixa.com1.z0.glb.clouddn.com/image/blog/deploy.png)</span><br><span class="line"></span><br><span class="line">注意type，和repository项，type填git，repository填你创建的仓库的ssh地址。</span><br><span class="line"></span><br><span class="line">![](http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E5%9C%B0%E5%9D%80.png)</span><br><span class="line"></span><br><span class="line">对，就是那个，复制过来粘贴进去就好了。</span><br><span class="line"></span><br><span class="line">然后执行以下命令。</span><br></pre></td></tr></table></figure>
-<p>hexo generate<br>hexo deploy<br>```</p>
+<pre><code>Enter passphrase (empty for no passphrase): [Type a passphrase]    
+Enter same passphrase again: [Type passphrase again]
+</code></pre><p>我没有输密码，毕竟记性太差，容易记混，好嘛。。  </p>
+<h2 id="查看ssh"><a href="#查看ssh" class="headerlink" title="查看ssh"></a>查看ssh</h2><p>好了，ssh生成了之后我们去看看它究竟是什么样的。位置是</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E4%BD%8D%E7%BD%AE.png" alt=""></p>
+<p>C盘-用户-你的用户名-.ssh文件夹。<br>有没有看到那个pub文件？那就是刚刚生成的密钥。打开它，复制里面的内容。</p>
+<h2 id="添加ssh"><a href="#添加ssh" class="headerlink" title="添加ssh"></a>添加ssh</h2><p>打开github，登陆之后选择settings</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/setting.png" alt=""></p>
+<p>进入设置之后选择</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A2.png" alt=""></p>
+<p>点击按钮</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A22.png" alt=""></p>
+<p>title随便填，下面的key就把刚刚复制的粘贴进去，点击下面绿色的按钮，输入密码后确认添加。</p>
+<h2 id="测试ssh"><a href="#测试ssh" class="headerlink" title="测试ssh"></a>测试ssh</h2><p>添加完之后，怎么知道自己的密钥好用呢？<br>我们来测试一下就知道了。</p>
+<p>输入命令（还是在git bush那个黑框里）</p>
+<p><code>ssh -T git@github.com</code></p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B5%8B%E8%AF%95ssh.png" alt=""></p>
+<p>如果出现上面图片中的文字，就是成功添加了ssh,否则就要重新添加一遍了。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>编辑<code>_config.yml</code>（在<code>E:\blog</code>下）。在部署的时候，要把下面的zipper都换成你的账号。</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/deploy.png" alt=""></p>
+<p>注意type，和repository项，type填git，repository填你创建的仓库的ssh地址。</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E5%9C%B0%E5%9D%80.png" alt=""></p>
+<p>对，就是那个，复制过来粘贴进去就好了。</p>
+<p>然后执行以下命令。</p>
+<p><code>hexo generate  
+hexo deploy</code></p>
 <p>就成功的部署到github了。</p>
 <p>赶快输入<code>a750183047.github.io</code>看看自己努力的效果吧。</p>
 <h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><p>hexo现在支持更加简单的命令格式了，比如：</p>
