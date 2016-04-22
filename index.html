@@ -100,7 +100,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/复习/" style="font-size: 10px;">复习</a>
 					</div>
 				</section>
 				
@@ -160,6 +160,82 @@
 
       <div class="body-wrap">
   
+    <article id="post-java-interface-first" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/22/java-interface-first/" class="article-date">
+  	<time datetime="2016-04-22T06:10:31.000Z" itemprop="datePublished">2016-04-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/22/java-interface-first/">Java基础复习-接口</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java基础复习-Interface"><a href="#Java基础复习-Interface" class="headerlink" title="Java基础复习 Interface"></a>Java基础复习 Interface</h1><p>接口，是Java中非常重要的抽象类型，接口的关键字 Interface，在使用的时候可以只定义方法体而不需要具体的实现。就像c++中的虚函数一样，一个类可以实现多个接口，从而解决了Java只有单继承的不足。</p>
+<p>上面是接口的介绍，刚刚学Java的时候，对于接口的理解还不是很深刻，也不太明白接口的作用。但是在学习安卓的过程中，发现接口运用的非常频繁，所以必须要搞明白接口的使用，才能更好的理解安卓代码。这也算对Java基础不足的显示吧。</p>
+<p>先看看接口的特点吧：</p>
+<p>接口与类相似点：</p>
+<ul>
+<li>一个接口可以有多个方法</li>
+<li>接口文件保存在Java结尾的文件中，文件名使用接口名（如 Abc.java 中 有 public interface Abc{} 这个接口）  </li>
+</ul>
+<p>接口与类的区别：  </p>
+<ul>
+<li>接口不能用于实例化对象 （不能 Abc abc = new Abc()）</li>
+<li>接口没有构造方法</li>
+<li>接口中所有的方法必须是抽象方法（<a href="http://baike.baidu.com/link?url=e4x4NhLYmIkaN3M6QWnPT8t52oz4dNqqTsvn8Ab-Io0u0dTLaI6olw23hNlS1Y6ry-_ZCK63c-K9S-A-NQdvXK">什么是抽象方法？</a> 如 public void abcD();）</li>
+<li>接口中不能包含成员变量，除了static和final变量</li>
+<li>接口不能被类继承，而是要被类实现（public class A implement Abc{}）</li>
+<li>接口支持多继承（public class A implement Abc，Def,Ghi{}）</li>
+</ul>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/复习/">复习</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/22/java-interface-first/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Hexo-搭建过程" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -186,85 +262,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="利用Hexo-Github搭建个人博客页面"><a href="#利用Hexo-Github搭建个人博客页面" class="headerlink" title="利用Hexo+Github搭建个人博客页面"></a>利用Hexo+Github搭建个人博客页面</h1><p>本文参照 <a href="http://zipperary.com/2013/05/28/hexo-guide-1/" target="_blank" rel="external">Zippera’s blog</a> 的系列教程，加上自己操作时遇到的问题，总结的文章。</p>
+        <h1 id="利用Hexo-Github搭建个人博客页面"><a href="#利用Hexo-Github搭建个人博客页面" class="headerlink" title="利用Hexo+Github搭建个人博客页面"></a>利用Hexo+Github搭建个人博客页面</h1><p>本文参照 <a href="http://zipperary.com/2013/05/28/hexo-guide-1/">Zippera’s blog</a> 的系列教程，加上自己操作时遇到的问题，总结的文章。</p>
 <h2 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是hexo</h2><blockquote>
-<p>hexo是一个机遇Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/tommy351/hexo" target="_blank" rel="external">@tommy315</a>。 </p>
+<p>hexo是一个机遇Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/tommy351/hexo">@tommy315</a>。 </p>
 <p>hexo：快速、简单且功能强大的 Node.js 博客框架。<br>A fast, simple &amp; powerful blog framework, powered by Node.js.</p>
 </blockquote>
 <p>好吧，上面的都是介绍，台湾的大神在大学期间就自己写出了这么牛的东西，真是佩服的五体投地，再看看我，还在这里苦逼的学着各种东西，惭愧啊。</p>
 <p>吐槽完毕，毕竟大神也不是天生就会的，人家用自己的努力换来了现在的成就，我们也不能就这样沉沦下去，还是得好好的丰富自己的技能才行呢，怎么办才好呢？</p>
 <p>虽然自己写的代码还算是不少，但是写过去的东西就忘记了，这个不是好的现象，为了避免这个问题，我决定还是把自己在学习过程中的知识点记录下来，这样不仅能增加印象，也能给自己留下一些东西。</p>
-<h1 id="开始了"><a href="#开始了" class="headerlink" title="开始了"></a>开始了</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Hexo是基于git的工具，所以首先需要配置git环境，怎么配置呢？好说，直接下载安装<br><a href="http://code.google.com/p/msysgit/" target="_blank" rel="external">git</a> 。</p>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>在Windows下安装它很简单，只需要<a href="http://nodejs.org/" target="_blank" rel="external">下载</a>安装文件安装就好了。</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>利用nmp命令即可安装。（在任意位置点击右键，选择 git bush）</p>
-<p> <code>npm install -g hexo</code></p>
-<p>成功之后</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/npm_install.png" alt=""></p>
-<h2 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h2><p>出现上面的提示之后就是说hexo已经安装完成了，然后在你喜欢的文件夹下 (如 <code>E：\blog</code>),执行以下命令（在 <code>H:\blog</code>文件夹下点右键，选择git bush）,Hexo就会在当前文件夹下创建需要的文件。<br>图片呢？</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/hexo_init.png" alt=""></p>
-<p>提示这个就是成功了。</p>
-<h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><p><code>hexo init</code>  </p>
-<h2 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h2><p><code>npm install</code></p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/npm_install.png" alt=""></p>
-<p>好像和第一张图片一样啊，不要在意截图截错了。。。。</p>
-<h2 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h2><p>到现在基本的操作已经完成了，我们已经搭建起本地hexo博客了，执行以下命令（刚在的小黑框没有关吧，要是关了记得在<code>E：\blog</code>文件夹下点右键，把它弄出来），然后打开浏览器输入 <code>localhost:4000</code>看看效果吧。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo gengrate  </span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>是不是看到结果了，是不是很简单，快点试试吧。</p>
-<p>下面就是把博客同步到github的方法了，毕竟我们是想让更多的人看到，是吧。</p>
-<h2 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h2><p>这个没有什么好说的了，去官网注册账号就可以了，要是有账号就更好了，连这一步都省掉了。<a href="https://github.com/signup/free" target="_blank" rel="external">在这里注册</a>。</p>
-<p>注册成功登陆之后应该是这个界面。</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/github.png" alt=""></p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>什么是仓库呢？就是repository，就在这里。</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt=""></p>
-<p>点击Repository，再点击new，创建一个新的仓库。</p>
-<p>注意：仓库的名字应该和自己github账号相对应的，比如我的账号是 <code>a750183047</code> 所以我的仓库名字应该是 <code>a750183047.github.io</code> 这里的 <code>github.io</code> 是固定的，只需要修改前面的名字就可以了。<br>比如这样。<br><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png" alt=""></p>
-<p>因为我的名字已经存在了，所以才会有错误提示，不用管它，直接点下面的绿色按钮，创建仓库。</p>
-<h2 id="创建ssh"><a href="#创建ssh" class="headerlink" title="创建ssh"></a>创建ssh</h2><p>到这里，代码仓库已经创建好了，现在就要创建一个ssh密钥，用来验证身份，上传代码了。</p>
-<p>好的，进入你博客的文件夹（<code>E:\bolg</code>）,右键打开git bush，输入以下命令，查看ssh密钥。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%9F%A5%E7%9C%8Bssh.png" alt=""></p>
-<p>上面前三个命令都输错了，第四个是正确的命令，如果输入正确的命令还是提示 No such file or directory 就是说你没有ssh，需要生成一个新的，当然啦，如果是第一次安装，肯定是没有的。要是命令输入完后没有提示，再输入一个 <code>ls</code> 命令查看一下文件，如果有文件，就是说有ssh，就不用再创建新的了。</p>
-<h2 id="生成新的ssh公钥"><a href="#生成新的ssh公钥" class="headerlink" title="生成新的ssh公钥"></a>生成新的ssh公钥</h2><p>输入命令 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;</span><br></pre></td></tr></table></figure>
-<p>生成新的密钥</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh.png" alt=""></p>
-<p>要是提示这个，就是成功了。</p>
-<p>注意，在输入完上述命令后，会有两个地方需要输入密码，这里你可以输入，也可以直接输入回车。</p>
-<pre><code>Enter passphrase (empty for no passphrase): [Type a passphrase]    
-Enter same passphrase again: [Type passphrase again]
-</code></pre><p>我没有输密码，毕竟记性太差，容易记混，好嘛。。  </p>
-<h2 id="查看ssh"><a href="#查看ssh" class="headerlink" title="查看ssh"></a>查看ssh</h2><p>好了，ssh生成了之后我们去看看它究竟是什么样的。位置是</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E4%BD%8D%E7%BD%AE.png" alt=""></p>
-<p>C盘-用户-你的用户名-.ssh文件夹。<br>有没有看到那个pub文件？那就是刚刚生成的密钥。打开它，复制里面的内容。</p>
-<h2 id="添加ssh"><a href="#添加ssh" class="headerlink" title="添加ssh"></a>添加ssh</h2><p>打开github，登陆之后选择settings</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/setting.png" alt=""></p>
-<p>进入设置之后选择</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A2.png" alt=""></p>
-<p>点击按钮</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B7%BB%E5%8A%A0ssh%E9%A1%B5%E9%9D%A22.png" alt=""></p>
-<p>title随便填，下面的key就把刚刚复制的粘贴进去，点击下面绿色的按钮，输入密码后确认添加。</p>
-<h2 id="测试ssh"><a href="#测试ssh" class="headerlink" title="测试ssh"></a>测试ssh</h2><p>添加完之后，怎么知道自己的密钥好用呢？<br>我们来测试一下就知道了。</p>
-<p>输入命令（还是在git bush那个黑框里）</p>
-<p><code>ssh -T git@github.com</code></p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E6%B5%8B%E8%AF%95ssh.png" alt=""></p>
-<p>如果出现上面图片中的文字，就是成功添加了ssh,否则就要重新添加一遍了。</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>编辑<code>_config.yml</code>（在<code>E:\blog</code>下）。在部署的时候，要把下面的zipper都换成你的账号。</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/deploy.png" alt=""></p>
-<p>注意type，和repository项，type填git，repository填你创建的仓库的ssh地址。</p>
-<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/ssh%E5%9C%B0%E5%9D%80.png" alt=""></p>
-<p>对，就是那个，复制过来粘贴进去就好了。</p>
-<p>然后执行以下命令。   </p>
-<pre><code>hexo generate        
-hexo deploy 
-</code></pre><p>就成功的部署到github了。</p>
-<p>赶快输入<code>a750183047.github.io</code>看看自己努力的效果吧。</p>
-<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><p>hexo现在支持更加简单的命令格式了，比如：</p>
-<blockquote>
-<p>hexo g == hexo generate<br>hexo d == hexo deploy<br>hexo s == hexo server<br>hexo n == hexo new  </p>
-</blockquote>
-<p>下面，就是怎么配置自己的博客，如何发表博文了。这些我也在摸索之中，我会及时总结更新的，期待吧。。。。</p>
-<p><code>2016年4月21日</code></p>
-
       
     </div>
     
@@ -277,6 +282,10 @@ hexo deploy
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/20/Hexo-搭建过程/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Java基础复习-接口 | 倾心成铭</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java基础复习 Interface接口，是Java中非常重要的抽象类型，接口的关键字 Interface，在使用的时候可以只定义方法体而不需要具体的实现。就像c++中的虚函数一样，一个类可以实现多个接口，从而解决了Java只有单继承的不足。
+上面是接口的介绍，刚刚学Java的时候，对于接口的理解还不是很深刻，也不太明白接口的作用。但是在学习安卓的过程中，发现接口运用的非常频繁，所以必须要搞明白接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础复习-接口">
+<meta property="og:url" content="http://yoursite.com/2016/04/22/java-interface-first/index.html">
+<meta property="og:site_name" content="倾心成铭">
+<meta property="og:description" content="Java基础复习 Interface接口，是Java中非常重要的抽象类型，接口的关键字 Interface，在使用的时候可以只定义方法体而不需要具体的实现。就像c++中的虚函数一样，一个类可以实现多个接口，从而解决了Java只有单继承的不足。
+上面是接口的介绍，刚刚学Java的时候，对于接口的理解还不是很深刻，也不太明白接口的作用。但是在学习安卓的过程中，发现接口运用的非常频繁，所以必须要搞明白接">
+<meta property="og:updated_time" content="2016-04-22T07:08:37.945Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java基础复习-接口">
+<meta name="twitter:description" content="Java基础复习 Interface接口，是Java中非常重要的抽象类型，接口的关键字 Interface，在使用的时候可以只定义方法体而不需要具体的实现。就像c++中的虚函数一样，一个类可以实现多个接口，从而解决了Java只有单继承的不足。
+上面是接口的介绍，刚刚学Java的时候，对于接口的理解还不是很深刻，也不太明白接口的作用。但是在学习安卓的过程中，发现接口运用的非常频繁，所以必须要搞明白接">
+  
+    <link rel="alternative" href="/atom.xml" title="倾心成铭" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/iconic.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">倾心成铭</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">倾心成铭的后院</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/a750183047" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/qingxinchengming" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/复习/" style="font-size: 10px;">复习</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">倾心成铭</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/iconic.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">倾心成铭</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">倾心成铭的后院</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/a750183047" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/qingxinchengming" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-java-interface-first" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/22/java-interface-first/" class="article-date">
+  	<time datetime="2016-04-22T06:10:31.000Z" itemprop="datePublished">2016-04-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java基础复习-接口
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/复习/">复习</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java基础复习-Interface"><a href="#Java基础复习-Interface" class="headerlink" title="Java基础复习 Interface"></a>Java基础复习 Interface</h1><p>接口，是Java中非常重要的抽象类型，接口的关键字 Interface，在使用的时候可以只定义方法体而不需要具体的实现。就像c++中的虚函数一样，一个类可以实现多个接口，从而解决了Java只有单继承的不足。</p>
+<p>上面是接口的介绍，刚刚学Java的时候，对于接口的理解还不是很深刻，也不太明白接口的作用。但是在学习安卓的过程中，发现接口运用的非常频繁，所以必须要搞明白接口的使用，才能更好的理解安卓代码。这也算对Java基础不足的显示吧。</p>
+<p>先看看接口的特点吧：</p>
+<p>接口与类相似点：</p>
+<ul>
+<li>一个接口可以有多个方法</li>
+<li>接口文件保存在Java结尾的文件中，文件名使用接口名（如 Abc.java 中 有 public interface Abc{} 这个接口）  </li>
+</ul>
+<p>接口与类的区别：  </p>
+<ul>
+<li>接口不能用于实例化对象 （不能 Abc abc = new Abc()）</li>
+<li>接口没有构造方法</li>
+<li>接口中所有的方法必须是抽象方法（<a href="http://baike.baidu.com/link?url=e4x4NhLYmIkaN3M6QWnPT8t52oz4dNqqTsvn8Ab-Io0u0dTLaI6olw23hNlS1Y6ry-_ZCK63c-K9S-A-NQdvXK" target="_blank" rel="external">什么是抽象方法？</a> 如 public void abcD();）</li>
+<li>接口中不能包含成员变量，除了static和final变量</li>
+<li>接口不能被类继承，而是要被类实现（public class A implement Abc{}）</li>
+<li>接口支持多继承（public class A implement Abc，Def,Ghi{}）</li>
+</ul>
+<a id="more"></a>
+<h2 id="接口的声明"><a href="#接口的声明" class="headerlink" title="接口的声明"></a>接口的声明</h2><p>接口的声明格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface Abc extern D&#123;  </span><br><span class="line">	//声明变量  </span><br><span class="line">	//抽象方法  </span><br><span class="line">     void a();  </span><br><span class="line">     void b();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接口有以下特点：</p>
+<ul>
+<li>接口是隐试抽象的，当声明一个接口的时候，不必使用abstract关键字。</li>
+<li>接口中每一个方法都是隐试抽象，不必写abstract关键字。</li>
+<li>接口中的方法都是public的</li>
+</ul>
+<p>如：</p>
+<pre><code>/* 文件名 : Animal.java */
+interface Animal {
+
+   public void eat();
+   public void travel();
+}  
+</code></pre><h2 id="实现接口"><a href="#实现接口" class="headerlink" title="实现接口"></a>实现接口</h2><pre><code>/* 文件名 : MammalInt.java */
+public class MammalInt implements Animal{
+
+   public void eat(){
+      System.out.println(&quot;Mammal eats&quot;);
+   }
+
+   public void travel(){
+      System.out.println(&quot;Mammal travels&quot;);
+   } 
+
+   public int noOfLegs(){
+      return 0;
+   }
+
+   public static void main(String args[]){
+      MammalInt m = new MammalInt();
+      m.eat();
+      m.travel();
+   }
+} 
+</code></pre><p>重写接口声明的方法时，需要注意一下规则：</p>
+<ul>
+<li>类在实现接口的方法时，不能抛出强制性异常，只能在接口中，或者继承接口的抽象类中抛出强制性异常。（不理解什么是强制性异常，待学习！）</li>
+<li>类在重写方法时要保值一直的方法名，并且返回值类型也要对应。</li>
+</ul>
+<h2 id="接口的继承"><a href="#接口的继承" class="headerlink" title="接口的继承"></a>接口的继承</h2><p>一个接口能继承另一个接口，和类之间的继承方法类似。接口的继承使用extends关键字，子接口继承父接口的方法。</p>
+<pre><code>// 文件名: Sports.java
+public interface Sports
+{
+   public void setHomeTeam(String name);
+   public void setVisitingTeam(String name);
+}
+
+// 文件名: Football.java
+public interface Football extends Sports
+{
+   public void homeTeamScored(int points);
+   public void visitingTeamScored(int points);
+   public void endOfQuarter(int quarter);
+}
+
+// 文件名: Hockey.java
+public interface Hockey extends Sports
+{
+   public void homeGoalScored();
+   public void visitingGoalScored();
+   public void endOfPeriod(int period);
+   public void overtimePeriod(int ot);
+}
+</code></pre><p>Hockey接口自己声明了四个方法，从Sports接口继承了两个方法，这样，实现Hockey接口的类需要实现六个方法。<br>相似的，实现Football接口的类需要实现五个方法，其中两个来自于Sports接口。</p>
+<h2 id="接口的多重继承"><a href="#接口的多重继承" class="headerlink" title="接口的多重继承"></a>接口的多重继承</h2><p>在Java中，类是不支持多重继承的，但是接口允许多重继承。</p>
+<p><code>public interface Hockey extends Sports, Event</code></p>
+<h2 id="标记接口"><a href="#标记接口" class="headerlink" title="标记接口"></a>标记接口</h2><p>最常用的继承接口是没有包含任何方法的接口。<br>标识接口是没有认识方法和属性的接口，它仅仅表明它的类属于一个特定的类型，供其他代码来测试允许做一些事情。<br>标记接口的作用：简单形象的说就是给某个对象打个标（盖个戳），使对象拥有某个或某些特权。<br>例如：java.awt.event包中的MouseListener接口继承的java.util.EventListener接口定义如下：</p>
+<pre><code>package java.util;
+public interface EventListener
+{}
+</code></pre><p>没有任何方法的接口被称为标记接口，其主要用于以下两种目的：</p>
+<ul>
+<li>建立一个公共的父接口<br>  正如EventListener接口，这是有几十个其他接口扩展的Java API，你可以使用一个标记接口来建立一组接口的父接口，如当一个接口继承了该接口，Java虚拟机就知道该接口将要被用于一个时间的代理方案。</li>
+<li>向一个类添加数据类型<br>  这种情况是标记接口最初的目的，实现标记接口的类不需要定义任何接口方法，但是该类通过多态性变成一个接口类型。</li>
+</ul>
+<p><a href="http://www.runoob.com/java/java-interfaces.html" target="_blank" rel="external">以上资料来自这里</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/20/Hexo-搭建过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo 搭建过程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 倾心成铭
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
