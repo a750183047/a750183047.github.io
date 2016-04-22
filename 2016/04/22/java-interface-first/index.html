@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="倾心成铭">
 <meta property="og:description" content="Java基础复习 Interface接口，是Java中非常重要的抽象类型，接口的关键字 Interface，在使用的时候可以只定义方法体而不需要具体的实现。就像c++中的虚函数一样，一个类可以实现多个接口，从而解决了Java只有单继承的不足。
 上面是接口的介绍，刚刚学Java的时候，对于接口的理解还不是很深刻，也不太明白接口的作用。但是在学习安卓的过程中，发现接口运用的非常频繁，所以必须要搞明白接">
-<meta property="og:updated_time" content="2016-04-22T07:08:37.945Z">
+<meta property="og:updated_time" content="2016-04-22T08:46:17.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础复习-接口">
 <meta name="twitter:description" content="Java基础复习 Interface接口，是Java中非常重要的抽象类型，接口的关键字 Interface，在使用的时候可以只定义方法体而不需要具体的实现。就像c++中的虚函数一样，一个类可以实现多个接口，从而解决了Java只有单继承的不足。
@@ -295,6 +295,129 @@ public interface EventListener
 <li>向一个类添加数据类型<br>  这种情况是标记接口最初的目的，实现标记接口的类不需要定义任何接口方法，但是该类通过多态性变成一个接口类型。</li>
 </ul>
 <p><a href="http://www.runoob.com/java/java-interfaces.html" target="_blank" rel="external">以上资料来自这里</a></p>
+<h2 id="接口在Android中的运用"><a href="#接口在Android中的运用" class="headerlink" title="接口在Android中的运用"></a>接口在Android中的运用</h2><p>接口在安卓中的运用十分频繁，作用也很多，其中最主要的是提供类之间的通信（自以为）。</p>
+<h3 id="接口做回调"><a href="#接口做回调" class="headerlink" title="接口做回调"></a>接口做回调</h3><h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><p>小明想要问小红借10块钱,小红答应借. 但是小红很关心小明还钱,因为小红想要在小明还钱之后,去买好吃的蛋糕.<br>这个时候, 小红又不能时时刻刻催着小明还钱. 只能等小明还钱的时候通知小红了;<br>那么, 小明通知小红的这个过程, 我把它叫做 回调。</p>
+<p>1 首先定义一个还钱的回调接口</p>
+<pre><code>public interface OnRepay{  
+    boolean onRepay();  
+}
+</code></pre><p>2 因为小明还钱，随意在小明（XiaoMing）类中，调用接口方法，进行还钱。</p>
+<pre><code>//小明, 用来借钱的类, 同时也是调用回调函数的类
+public class XiaoMing {
+    OnRepay XiaoHong;// 小红
+
+    public XiaoMing(OnRepay listener) {
+        this.XiaoHong = listener;
+    }
+
+    // 小明借钱的方法
+    public void JieQian() {
+        Log.e(&quot;小明&quot;, &quot;小明借了小红10块钱,小明说:\&quot;不要着急, 还钱的时候,我会告诉你.\&quot;&quot;);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // 过了一会儿, 小明要还钱了,这个时候要通知小红. 通知的方式,就用到了回调
+        if (XiaoHong.onRepay()) {// 告诉小红, 小明还钱了;
+            //如果小红收到小明还的10块钱;
+            Log.e(&quot;小红&quot;, &quot;谢谢还钱,我已经收到&quot;);
+        }else {
+            //如果小红没有收到10块钱(可能路上被强盗抢了),那么....
+            Log.e(&quot;小红&quot;, &quot;小明还我的钱,我没有收到,可能被快递员私吞了, 请再还一次&quot;);
+        }
+    }
+}
+</code></pre><p>3 因为小红想要知道还钱的结果所以小红需要实现这个接口方法</p>
+<pre><code>public class MainActivity extends Activity implements OnRepay {
+
+    XiaoMing XiaoMing;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        XiaoMing = new XiaoMing(this);
+    }
+
+    @Override
+    public boolean onRepay() {// 小明还钱的时候,小红接收, 返回true:收到了钱, 返回false:没收收到
+        Log.e(&quot;小红&quot;, &quot;小红没有收到小明的还钱,可能被快递员私吞了...&quot;);
+        return false;
+    }
+}
+</code></pre><p>4 Ok，步骤完成了，就差启动小明借钱了。</p>
+<pre><code>//这个方法放在MainActivity中
+public void button1(View view) {
+    XiaoMing.JieQian();
+}
+
+/**对应的Button声明
+&lt;Button
+   android:layout_width=&quot;wrap_content&quot;
+   android:layout_height=&quot;wrap_content&quot;
+   android:onClick=&quot;button1&quot;
+   android:text=&quot;Interface回调&quot; /&gt;
+*/
+</code></pre><p><a href="http://blog.csdn.net/angcyo/article/details/46410577" target="_blank" rel="external">以上代码转载自这里</a></p>
+<p>这个例子很好的展示了接口在类之间通讯的作用，小红类通过接口等待小明的还钱动作，当小明执行<code>onRepay()</code>方法时就相当于进行了还钱动作，这时候小红类实现的<code>onRepay()</code>方法中的代码就会被执行，小红打了一个log，返回了一个false，表示自己没有收到钱，这时候小红是知道小明执行了还钱的动作了，所以小明成功的通知了小红“我已经还钱了”，小红也通过接口的返回值通知了小明，“你的钱我并没有收到”，完成了两个类之间的通讯。<br>在使用接口的过程中，还可以使用<code>public setOnRepay(OnRepay listener){this.listener = listener}</code>的方式添加接口，而不用再构造方法中添加，这样动态的添加使代码更加灵活，在需要通知的时候添加，不需要通知时候就不添加。<br>接口除了有返回值，还可以有参数，比如：</p>
+<pre><code>public interface OnRepay{  
+        boolean onRepay(int howMuch);  
+    }
+
+
+    // 小明借钱的方法
+    public void JieQian() {
+        Log.e(&quot;小明&quot;, &quot;小明借了小红10块钱,小明说:\&quot;不要着急, 还钱的时候,我会告诉你.\&quot;&quot;);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // 过了一会儿, 小明要还钱了,这个时候要通知小红. 通知的方式,就用到了回调
+        if (XiaoHong.onRepay(100)) {// 告诉小红, 小明还钱了,还了100元;
+            //如果小红收到小明还的10块钱;
+            Log.e(&quot;小红&quot;, &quot;谢谢还钱,我已经收到&quot;);
+        }else {
+            //如果小红没有收到10块钱(可能路上被强盗抢了),那么....
+            Log.e(&quot;小红&quot;, &quot;小明还我的钱,我没有收到,可能被快递员私吞了, 请再还一次&quot;);
+        }
+    }
+
+
+public class MainActivity extends Activity implements OnRepay {
+
+        XiaoMing XiaoMing;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
+            XiaoMing = new XiaoMing(this);
+        }
+
+        @Override
+        public boolean onRepay(int howMuch) {// 小明还钱的时候,小红接收, 返回true:收到了钱, 返回false:没收收到
+            if(howMuch == 100){
+            Log.e(&quot;小红&quot;, &quot;收到钱了，而且钱数正好&quot;);
+            return true;
+        }else{
+            Log.e(&quot;小红&quot;, &quot;没收到钱，或者钱数不对&quot;);
+             return false;
+        }    
+
+        }
+    }
+</code></pre><p>通过带参数的接口，我们可以很方便的在两个或者过个类之间传递数据，并且十分的方便。</p>
+<p>对接口的复习大概就是这些，还有很多的内容没有学习，还需要继续的努力。</p>
+<p>基础知识对以后的提升有很大的帮助，一定要把基础知识掌握透彻，才能在以后有更好的发展，至少在遇到一些问题的时候，能想到是什么问题，而不是查到最后才发现是自己的基础不够扎实才出现的问题。</p>
+<p><code>2016年4月22日</code></p>
 
       
     </div>
