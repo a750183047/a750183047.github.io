@@ -100,7 +100,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/复习/" style="font-size: 10px;">复习</a>
+						<a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/复习/" style="font-size: 20px;">复习</a>
 					</div>
 				</section>
 				
@@ -159,6 +159,69 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Android-activity启动模式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/22/Android-activity启动模式/" class="article-date">
+  	<time datetime="2016-04-22T12:27:55.000Z" itemprop="datePublished">2016-04-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/22/Android-activity启动模式/">Android Activity启动模式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Android-Activity的启动模式"><a href="#Android-Activity的启动模式" class="headerlink" title="Android Activity的启动模式"></a>Android Activity的启动模式</h1><p>在编写安卓程序的过程中，想必大家对Activity的生命周期都很熟悉了吧（不熟悉？这里有），因为很多操作都需要结合Activity的生命周期去执行，但是Activity还有一个启动模式，平时练的就很少了，感觉什么启动模式都是差不多的，没有什么区别。<br>但是这毕竟只是在练习，如果真的做项目了，这些细节问题很可能造成一些奇怪的Bug，所以还是要复习一下活动的启动模式，争取到遇到相关问题的时候不至于什么都不知道从而浪费更多的时间。</p>
+<h2 id="standard-模式"><a href="#standard-模式" class="headerlink" title="standard 模式"></a>standard 模式</h2><p>默认的启动模式。每当启动一个新的活动，他就会在返回栈中入栈，并处于栈顶的位置，对于使用该模式的活动，系统不会在乎这个活动是否存在返回栈中，每次启动活动都会创建一个新的实例。</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/standard.png" alt=""></p>
+<p>看图片就能很快理解这种启动模式，每次启动一个活动都会在返回栈中创建一个该活动的实例，有时候我们从一个活动A中跳转到另一个活动B，又从活动B中跳回活动A（跳转是创建该活动，比如用Intent，startActivity，而不是用返回键），这时候，返回栈中就ABA这三个实例了，如果这是我们按返回键，会发现第一次从A返回到了B，再按一次返回键，又回到了A，这里的两个A并不是同一个A，这就是standard启动模式的特点。简单粗暴，什么都不管，你打开一个活动我就给你创建一个实例，如果一直在创建活动，总会把内存沾满导致死机的。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/复习/">复习</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/22/Android-activity启动模式/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-java-interface-first" class="article article-type-post" itemscope itemprop="blogPost">
   
