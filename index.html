@@ -171,6 +171,73 @@ var _hmt = _hmt || [];
 
       <div class="body-wrap">
   
+    <article id="post-android-broadcastReceiver" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/24/android-broadcastReceiver/" class="article-date">
+  	<time datetime="2016-04-24T10:19:59.000Z" itemprop="datePublished">2016-04-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/24/android-broadcastReceiver/">Android BroadcastReceiver复习</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Android-BroadcastReceiver复习"><a href="#Android-BroadcastReceiver复习" class="headerlink" title="Android BroadcastReceiver复习"></a>Android BroadcastReceiver复习</h1><p>BrodacastReceiver，安卓四大组件之一，可见其重要性，所以学会运用它还是很重要的。<br>广播接收者，顾名思义，就是接收广播的，那什么是广播呢？这里的广播可不是调频广播，这里的广播其实是。。。好吧，我们来百度一下。  </p>
+<blockquote>
+<p>Android广播机制指的是，在一个应用程序运行的时候可以自定义一个消息类型，让相应的接收器去处理这个消息或者是系统消息，比如来电话了、来短信了、手机没电了等等系统发送的消息。系统发送的消息也可以通过广播的方式通知给应用程序，这样子就避免了新开一个Thread去监听系统或其他应用发送过来的消息的状态。    </p>
+</blockquote>
+<p>广播的概念其实还是很好理解的，就是说如果你的应用想要知道手机什么时候来电话了，只需要设置一个来电的广播接收器就可以了，如果来电话了，系统就会发送出一个广播，通知软件，这时候接收器就会收到这个广播，你的软件也就知道来电话了。<br>如果你的应用还有一个兄弟应用，你想在你的应用打开的时候偷偷的打开你的兄弟应用，那你就可以在软件中发送一个广播，如果你的兄弟应用接受到了这个广播，它就悄悄的启动，然后手机就变卡了。。。。  </p>
+<p>关于广播的类型和其相关的特性，改日再复习，今天先看如何注册广播接收器。</p>
+<h2 id="动态注册"><a href="#动态注册" class="headerlink" title="动态注册"></a>动态注册</h2><p>好的，我们直接上代码。  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line">   * 网络状态变化监听</span><br><span class="line">   */</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">NetworkChangeReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span></span>&#123;</span><br><span class="line"></span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span> </span>&#123;</span><br><span class="line">          Toast.makeText(MainActivity.<span class="keyword">this</span>,<span class="string">"网络状态改变"</span>,Toast.LENGTH_SHORT).show();</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/复习/">复习</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/24/android-broadcastReceiver/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-activity-声明周期" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
