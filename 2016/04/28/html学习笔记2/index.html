@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>html学习笔记之表单 | 倾心成铭</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="HTML学习笔记 表单表单是HTML中用来提交数据的标签，里面有输入框，单选框，多选矿，字符框等多种控件。form是表单的标签。
+
+&amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;请输入姓名&amp;quot; size=&amp;quot;50&amp;quot; readonly disabled&amp;gt; 普通字符输入框，type规定了输入的类型，value则是输入框内的内容，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html学习笔记之表单">
+<meta property="og:url" content="http://yoursite.com/2016/04/28/html学习笔记2/index.html">
+<meta property="og:site_name" content="倾心成铭">
+<meta property="og:description" content="HTML学习笔记 表单表单是HTML中用来提交数据的标签，里面有输入框，单选框，多选矿，字符框等多种控件。form是表单的标签。
+
+&amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;请输入姓名&amp;quot; size=&amp;quot;50&amp;quot; readonly disabled&amp;gt; 普通字符输入框，type规定了输入的类型，value则是输入框内的内容，">
+<meta property="og:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE.png">
+<meta property="og:updated_time" content="2016-04-28T03:11:54.479Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html学习笔记之表单">
+<meta name="twitter:description" content="HTML学习笔记 表单表单是HTML中用来提交数据的标签，里面有输入框，单选框，多选矿，字符框等多种控件。form是表单的标签。
+
+&amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;请输入姓名&amp;quot; size=&amp;quot;50&amp;quot; readonly disabled&amp;gt; 普通字符输入框，type规定了输入的类型，value则是输入框内的内容，">
+<meta name="twitter:image" content="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE.png">
+  
+    <link rel="alternative" href="/atom.xml" title="倾心成铭" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?5f36264642df8abf8560a6e1ea86508e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/iconic.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">倾心成铭</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">倾心成铭的后院</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/a750183047" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/qingxinchengming" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/html/" style="font-size: 12.5px;">html</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/复习/" style="font-size: 17.5px;">复习</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">倾心成铭</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/iconic.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">倾心成铭</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">倾心成铭的后院</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/a750183047" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/qingxinchengming" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-html学习笔记2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/28/html学习笔记2/" class="article-date">
+  	<time datetime="2016-04-28T02:36:02.000Z" itemprop="datePublished">2016-04-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      html学习笔记之表单
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HTML学习笔记-表单"><a href="#HTML学习笔记-表单" class="headerlink" title="HTML学习笔记 表单"></a>HTML学习笔记 表单</h1><p>表单是HTML中用来提交数据的标签，里面有输入框，单选框，多选矿，字符框等多种控件。<code>form</code>是表单的标签。</p>
+<ul>
+<li><code>&lt;input type=&quot;text&quot; value=&quot;请输入姓名&quot; size=&quot;50&quot; readonly disabled&gt;</code> 普通字符输入框，type规定了输入的类型，value则是输入框内的内容，如果这里有内容，则显示在输入框中。size是输入框能够输入的字符长度，readonly，只读，输入框无法输入字符，disable，输入框无法被选中。</li>
+<li><code>&lt;input type=&quot;password&quot; value=&quot;密码&quot; size=&quot;50&quot;&gt;</code> type为password，输入类型为密码，则输入的字符会被·替换。</li>
+<li><code>&lt;input type=&quot;hidden&quot; value=&quot;隐藏框&quot; size=&quot;50&quot;&gt;</code> type为hidden，输入框隐藏，用来给服务器发送一些数据而不对用户可见。  </li>
+<li><pre><code>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;man&quot;&gt;
+    男
+    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;woman&quot;&gt;
+    女
+</code></pre></li>
+</ul>
+<p>单选按钮，type为radio，通过name设置相同的值规定为一组，达到单选的效果。</p>
+<a id="more"></a> 
+<ul>
+<li><pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;loves&quot; value=&quot;eat&quot;&gt;
+吃饭
+&lt;input type=&quot;checkbox&quot; name=&quot;loves&quot; value=&quot;sleep&quot;&gt;
+睡觉
+&lt;input type=&quot;checkbox&quot; name=&quot;loves&quot; value=&quot;study&quot;&gt;
+学习
+</code></pre></li>
+</ul>
+<p>type为checkbox，多选选项，通过name设置相同的值为一组，达到多选的效果。</p>
+<ul>
+<li><pre><code>&lt;select name=&quot;school&quot;&gt;
+        &lt;option value=&quot;硕士&quot;&gt;硕士&lt;/option&gt;
+        &lt;option value=&quot;本科&quot;&gt;本科&lt;/option&gt;
+        &lt;option value=&quot;专科&quot;&gt;专科&lt;/option&gt;
+    &lt;/select&gt;
+</code></pre></li>
+</ul>
+<p>select，下拉选择框，通过option设置列表项。select有属性<code>mulitple</code>，多选列表。</p>
+<ul>
+<li><code>&lt;textarea rows=&quot;10&quot; cols=&quot;60&quot;&gt;这里是一个大的输入框&lt;/textarea&gt;</code> 通过属性rows，和cols设置输入框的行和列。</li>
+<li>fieldset标签，语义化标签，可以给表单分组，进行语义化。通过legend标签进行标题设置。</li>
+</ul>
+<h2 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h2><ul>
+<li><code>&lt;input type=&quot;button&quot; value=&quot;普通按钮&quot; onClick=&quot;alert(&#39;这是一个普通按钮&#39;)&quot;&gt;</code>普通按钮标签，通过type设置为button选择。设置onClick添加点击事件。</li>
+<li><code>&lt;input type=&quot;submit&quot; value=&quot;提交按钮&quot;&gt;</code>提交按钮，通过type设置为submit，点击后会将表单的内容提交到<code>form</code>标签下的<code>action</code>属性设置的页面，<code>method</code>属性为提交的方式。</li>
+<li><code>&lt;input type=&quot;reset&quot; value=&quot;重置按钮&quot;&gt;</code> 充值按钮，点击后会将表单内的所有控件的内容重置为初始状态。</li>
+<li><code>&lt;input type=&quot;image&quot; src=&quot;http://file.qingxinchengming.cn/image/blog/deploy.png&quot; width=&quot;100&quot; height=&quot;40&quot;&gt;</code> 图片按钮，通过加载一张图片来作为按钮，功能和提交按钮相同。</li>
+</ul>
+<p>示例代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>表单标签<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"框架标签.html"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">legend</span>&gt;</span>这是提示框<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">		姓名：</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"请输入姓名"</span> <span class="attr">size</span>=<span class="string">"50"</span> <span class="attr">readonly</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		密码：</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"密码"</span> <span class="attr">size</span>=<span class="string">"50"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		隐藏框：</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">value</span>=<span class="string">"隐藏框"</span> <span class="attr">size</span>=<span class="string">"50"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		性别：</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"man"</span>&gt;</span></span><br><span class="line">		男</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"woman"</span>&gt;</span></span><br><span class="line">		女<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">legend</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>这又是一个提示框<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">		爱好：</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"loves"</span> <span class="attr">value</span>=<span class="string">"eat"</span>&gt;</span></span><br><span class="line">		吃饭</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"loves"</span> <span class="attr">value</span>=<span class="string">"sleep"</span>&gt;</span></span><br><span class="line">		睡觉</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"loves"</span> <span class="attr">value</span>=<span class="string">"study"</span>&gt;</span></span><br><span class="line">		学习<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		学历：</span><br><span class="line">		<span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"school"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"硕士"</span>&gt;</span>硕士<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"本科"</span>&gt;</span>本科<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"专科"</span>&gt;</span>专科<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		专业：</span><br><span class="line">		<span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"what"</span> <span class="attr">multiple</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"电子"</span>&gt;</span>电子<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"通信"</span>&gt;</span>通信<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"计算机"</span>&gt;</span>计算机<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		备注：</span><br><span class="line">		<span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">"10"</span> <span class="attr">cols</span>=<span class="string">"60"</span>&gt;</span>这里是一个大的输入框<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"普通按钮"</span> <span class="attr">onClick</span>=<span class="string">"alert('这是一个普通按钮')"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交按钮"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"重置按钮"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"image"</span> <span class="attr">src</span>=<span class="string">"http://file.qingxinchengming.cn/image/blog/deploy.png"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">height</span>=<span class="string">"40"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上述代码在浏览器中显示的效果：</p>
+<p><img src="http://7xoixa.com1.z0.glb.clouddn.com/image/blog/%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE.png" alt=""></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/25/html学习笔记记1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">html学习笔记之标签</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 倾心成铭
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
