@@ -116,7 +116,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 13.33px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/复习/" style="font-size: 16.67px;">复习</a>
+						<a href="/tags/Android/" style="font-size: 13.33px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/复习/" style="font-size: 16.67px;">复习</a>
 					</div>
 				</section>
 				
@@ -181,6 +181,90 @@ var _hmt = _hmt || [];
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-javascript基础学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/02/javascript基础学习/" class="article-date">
+  	<time datetime="2016-05-02T07:52:08.000Z" itemprop="datePublished">2016-05-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/02/javascript基础学习/">javascript基础学习</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h1><h2 id="JavaScript概述"><a href="#JavaScript概述" class="headerlink" title="JavaScript概述"></a>JavaScript概述</h2><blockquote>
+<p>a.一种基于对象和事件驱动的脚本语言<br>b.作用： 给页面添加动态效果<br>c.历史： 原名叫做livescript.W3c组织开发的标准叫ECMAscipt.<br>d.特点：1). 弱势语言<br>2). 由浏览器直接解析执行。（函数不能直接执行）<br>3). 是一个解释性语言<br>          4). 交互性（它可以做的就是信息的动态交互）<br>          5). 安全性（不允许直接访问本地硬盘）<br>          6). 跨平台性（只要是可以解释Js的浏览器都可以执行，和平台无关<br>e . javascript和java的一些区别： 1). javascript是一个解释性语言,java是编译解释性语言<br>2). javascript是一个弱势语言，Java是一个强势语言<br>3). 在页面上引入的方式不同javascript代表用<code>&lt;script&gt;</code>引用，Java代码<code>&lt;%&gt;</code>   </p>
+</blockquote>
+<p>&lt;!-more–&gt; </p>
+<h2 id="JavaScript语言组成"><a href="#JavaScript语言组成" class="headerlink" title="JavaScript语言组成"></a>JavaScript语言组成</h2><p>ECMAScript+Bom+DOM<br>ECMAScript：规定了一些语法，变量，for循环等等结构<br>Bom：Browser  object  Model 浏览器对象模型<br>DOM：Document  object  Model 文档对象模型  </p>
+<h2 id="JavaScript与HTML结合方式"><a href="#JavaScript与HTML结合方式" class="headerlink" title="JavaScript与HTML结合方式"></a>JavaScript与HTML结合方式</h2><ol>
+<li>采用时间来调用，代码写在字符串中 <code>&lt;button onclick = &quot;alert(&#39;大家好&#39;)&quot;&gt;点击&lt;/button&gt;</code>  </li>
+<li>采用定义函数的方式：用function来定义函数<code>function fun(){ alert(&#39;你好&#39;)}</code>  </li>
+<li>采用外部js文件，利用<code>&lt;script src = &quot;a.js&quot;&gt;&lt;/script&gt;</code> 引入  </li>
+</ol>
+<h2 id="JavaScript基本语法"><a href="#JavaScript基本语法" class="headerlink" title="JavaScript基本语法"></a>JavaScript基本语法</h2><ul>
+<li>定义变量：采用<code>var</code>关键字来定义，定义的变量的类型是由给定的值来决定的。</li>
+<li>数据类型：<ul>
+<li>undefine，表示未定义类型</li>
+<li>Number，代表了一切数字类型</li>
+<li>String，字符串类型</li>
+<li>Boolean，布尔类型</li>
+<li>Function，函数类型</li>
+<li>Null，</li>
+<li>object，对象类型</li>
+</ul>
+</li>
+<li>判断变量的类型：a. 采用typeof函数判断，<code>typeof(a) == &quot;string&quot;</code> b.采用instanceof运算符，<code>a instanceof String</code>  </li>
+<li>三大结构：顺序，选择，循环</li>
+<li>运算符：一元运算符，二元运算符，三元运算符，等号：== 判断的是内容，===全等，判断的是类型和内容。</li>
+<li>类型的转换：1. Number转String：<code>3 + &quot;&quot;</code>,2.Number转Boolean，在JavaScript中非0为真0为假，如果变量为null或者undefine，也是假。3.String转Number，parseInt，parseFloat，乘以1</li>
+<li></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-html学习笔记3css" class="article article-type-post" itemscope itemprop="blogPost">
   
