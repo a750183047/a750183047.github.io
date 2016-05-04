@@ -116,7 +116,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Android/" style="font-size: 13.33px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/复习/" style="font-size: 16.67px;">复习</a>
+						<a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/html/" style="font-size: 12.5px;">html</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/复习/" style="font-size: 17.5px;">复习</a>
 					</div>
 				</section>
 				
@@ -181,6 +181,72 @@ var _hmt = _hmt || [];
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-数据存取" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/04/数据存取/" class="article-date">
+  	<time datetime="2016-05-04T12:40:15.000Z" itemprop="datePublished">2016-05-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/04/数据存取/">数据存取</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安卓数据存取–sharedPreference和SQL数据库"><a href="#安卓数据存取–sharedPreference和SQL数据库" class="headerlink" title="安卓数据存取–sharedPreference和SQL数据库"></a>安卓数据存取–sharedPreference和SQL数据库</h1><h2 id="SharePreference"><a href="#SharePreference" class="headerlink" title="SharePreference"></a>SharePreference</h2><p>sharepreference是一个轻量级的存储数据的工具，该方法使用键值对的方式来存储数据，它支持多种不同类型的数据存储，如果存储的是整形，读取出来的也是整形，存储的是字符串，读取出来也是字符串。该方法使用简单，如果要存储的数据并不是很大，可采用该方法。</p>
+<h3 id="将数据存储到SharePreference中"><a href="#将数据存储到SharePreference中" class="headerlink" title="将数据存储到SharePreference中"></a>将数据存储到SharePreference中</h3><p>有三种方法得到其对象</p>
+<ul>
+<li>Context类中的getSharedPreferences方法，此方法接收两个参数，第一个参数用于设置文件名，如果指定的文件不存在则会创建一个，该文件有默认的存储位置，第二个参数用于指定操作模式，主要有两种模式，MODE_PRIVATE和MODE_MULTI_PROCESS。第一个是默认的操作模式。表示只有当前的程序才可以对这个文件进行读写。第二个用于多个进程中对同一个文件进行读写。  </li>
+<li>Activity类中的getPreferences方法，该方法只有一个操作模式参数，该方法会自动将当前活动的类名作为文件名。</li>
+<li>PreferenceManager类中的getDefaultSharedPreferences方法。这是一个静态方法，他接受一个Context参数，并自动使用当前应用的包名作文前缀来命名文件。 </li>
+</ul>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/复习/">复习</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/04/数据存取/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-javascript基础学习" class="article article-type-post" itemscope itemprop="blogPost">
   
